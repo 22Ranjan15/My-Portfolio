@@ -1,0 +1,662 @@
+/* ===== GENERAL STYLES ===== */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Default Light Mode */
+:root {
+  --primary-color: white;
+  --primary-color-2: rgb(250, 250, 250);
+  --primary-color-3: rgb(181, 181, 181);
+  --background-color: rgb(255, 255, 255);
+  --secondary-color: black;
+  --secondary-color-2: rgb(85, 85, 85);
+  --button-background: rgb(53, 53, 53);
+  --button-text-hover: grey;
+  --button-border: rgb(53, 53, 53) 0.1rem solid;
+  --button-border-2: rgb(255, 255, 255) 0.1rem solid;
+  --container-border: rgb(163, 163, 163);
+}
+
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  color: var(--secondary-color);
+}
+
+/* Set default font family */
+/* body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+} */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* Set default paragraph color */
+p {
+  color: var(--secondary-color-2);
+}
+
+/* ===== TRANSITION STYLES ===== */
+
+/* Add smooth transitions for links and buttons */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* ===== DESKTOP NAVIGATION ===== */
+
+/* Flexbox layout for navigation */
+nav,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Center and space out navigation items */
+nav {
+  justify-content: space-around;
+  height: 17vh;
+}
+
+/* Style navigation links */
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+nav li:last-child {
+  width: max-content;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Link styles */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  text-decoration-color: var(--primary-color);
+}
+
+/* Hover effect for links */
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--secondary-color);
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  text-decoration-color: var(--secondary-color);
+}
+
+/* Logo styles */
+.logo {
+  font-size: 2.7rem;
+  font-weight:bolder;
+}
+
+/* Disable pointer events on logo hover */
+.logo:hover {
+  cursor: default;
+  color: #6366F1;
+}
+
+/* ===== HAMBURGER MENU ===== */
+
+/* Hide hamburger navigation by default */
+#hamburger-nav {
+  display: none;
+}
+
+/* Position hamburger menu */
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style hamburger icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Style hamburger icon lines */
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: all 0.3 ease-in-out;
+}
+
+/* Style menu links container */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--primary-color);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+/* Style menu links */
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+/* Remove list styling from menu links */
+.menu-links li {
+  list-style: none;
+}
+
+/* Open state for menu links */
+.menu-links.open {
+  max-height: 300px;
+}
+
+/* Transform hamburger icon to 'X' when open */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* Reset hamburger icon transformations */
+.hamburger-icon span:first-child {
+  transform: none;
+  opacity: 1;
+}
+
+/* ===== SECTIONS ===== */
+
+/* General section styles */
+section {
+  padding-top: 2vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+/* Flexbox layout for section containers */
+.section-container {
+  display: flex;
+}
+
+/* ===== PROFILE SECTION ===== */
+
+/* Flexbox layout for profile section */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+/* Style profile picture container */
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* Center text in profile section */
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+/* Style profile text */
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Style section title */
+.title {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Style social media icons container */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ===== ICONS ===== */
+
+/* General icon styles */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+
+/* Flexbox layout for button container */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* General button styles */
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+/* Button color variations */
+.btn-color-1,
+.btn-color-2 {
+  border: var(--button-border);
+  color: var(--secondary-color-2);
+}
+
+/* Hover effects for buttons */
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: var(--button-background);
+  color: var(--primary-color);
+}
+
+.btn-color-1:hover {
+  background: var(--secondary-color);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: var(--button-border);
+  background: var(--secondary-color);
+}
+
+/* ===== ABOUT SECTION ===== */
+
+/* Position about section */
+#about {
+  position: relative;
+}
+
+/* Flexbox layout for about containers */
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+/* Style about picture */
+.about-pic {
+  border-radius: 2rem;
+}
+
+/* Position arrow icon */
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+/* Style details container */
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+/* Flexbox layout for section container */
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+
+/* Position experience section */
+#experience {
+  position: relative;
+}
+
+/* Style experience sub-title */
+.experience-sub-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Flexbox layout for experience details */
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Flexbox layout for article container */
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+/* Style experience articles */
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+/* Disable pointer events for article icons */
+article .icon {
+  cursor: default;
+}
+
+/* ===== PROJECTS SECTION ===== */
+
+/* Position projects section */
+#projects {
+  position: relative;
+}
+
+/* Style project containers */
+.color-container {
+  border-color: var(--container-border);
+  background: var(--primary-color-2);
+}
+
+/* Style project images */
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+/* Style project titles */
+.project-title {
+  margin: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Style project buttons */
+.project-btn {
+  color: var(--secondary-color);
+  border-color: var(--container-border);
+}
+
+/* ===== Certifications ===== */
+#certifications {
+  position: relative;
+}
+.feature-container {
+  background-color: var(--light-gray);
+  padding: 4rem 1rem;
+}
+
+.feature-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-info {
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.main-description {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-container {
+  margin-bottom: 1rem;
+}
+
+.icon-container img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.feature-svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+/* Flexbox layout for contact section */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+/* Style contact info container */
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: var(--button-border);
+  border-color: var(--container-border);
+  background: var(--background-color);
+  margin: 2rem auto;
+  padding: 0.5rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Style contact info items */
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+/* Disable pointer events for contact icons */
+.contact-icon {
+  cursor: default;
+}
+
+/* Style email icon */
+.email-icon {
+  height: 2.5rem;
+}
+
+.phone-icon {
+  height: 2.4rem;
+}
+
+/* Contact Form */
+
+#contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-submit {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #0056b3;
+}
+
+/* ===== FOOTER SECTION ===== */
+
+/* Style footer */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+/* Center footer text */
+footer p {
+  text-align: center;
+}

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ranjan_Portfolio</title>
+
+        <!-- Linking Style Sheets -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
+    </head>
+
+    <body>
+        <!-- ===== Navigation Bar ===== -->
+        <!-- Desktop Navigation -->
+        <nav id="desktop-nav">
+            <div class="logo" style="color: #0b0b0b;"><span style="color: #9203a5;">Ran</span>jan</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#profile" class="font-bold">Home</a></li> <!-- Link to About Section -->
+                    <li><a href="#about" class="font-bold">About</a></li> <!-- Link to About Section -->
+                    <li><a href="#resume" class="font-bold">Resume</a></li> <!-- Link to Resume Section -->
+                    <li><a href="#experience" class="font-bold">Skills</a></li> <!-- Link to Experience Section -->
+                    <li><a href="#projects" class="font-bold">Projects</a></li> <!-- Link to Projects Section -->
+                    <li><a href="#certifications" class="font-bold">Certificates</a></li>
+                    <li><a href="#contact" class="font-bold">Contact</a></li> <!-- Link to Contact Section -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hamburger Navigation (Mobile) -->
+        <nav id="hamburger-nav">
+            <div class="logo">Ranjan</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="menu-links">
+                    <li><a class="font-bold" href="#profile" onclick="toggleMenu()">Home</a></li> <!-- Link to About Section -->
+                    <li><a class="font-bold" href="#about" onclick="toggleMenu()">About</a></li> <!-- Link to About Section -->
+                    <li><a class="font-bold" href="#resume" onclick="toggleMenu()">Resume</a></li> <!-- Link to Resume Section -->
+                    <li><a class="font-bold" href="#experience" onclick="toggleMenu()">Skills</a></li> <!-- Link to Experience Section -->
+                    <li><a class="font-bold" href="#projects" onclick="toggleMenu()">Projects</a></li> <!-- Link to Projects Section -->
+                    <li><a class="font-bold" href="#contact" onclick="toggleMenu()">Contact</a></li> <!-- Link to Contact Section -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- ===== Profile Section ===== -->
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./assets/profile-pic.png" alt="Ranjan's profile picture" />
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p> <!-- Greeting -->
+                <h1 class="title" style="color: #0b0b0b;"><span style="color: #9203a5;">Ran</span>jan</h1> <!-- Name -->
+                <p class="section__text__p2">Aspiring Data Scientiest</p> <!-- Role -->
+                <!-- Buttons Section -->
+                <div class="btn-container">
+                    <!-- Download CV Button -->
+                    <button id="resume" class="btn btn-color-2" onclick="window.open('./assets/ranjan-resume.pdf')">
+                        Download CV
+                    </button>
+                    <!-- Contact Info Button -->
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <!-- Social Media Icons -->
+                <div id="socials-container">
+                    <img
+                        src="./assets/linkedin_light.png"
+                        alt="My LinkedIn profile"
+                        class="icon linkedin-icon"
+                        onclick="location.href='https://www.linkedin.com/in/das-ranjan22/'"
+                    />
+                    <img
+                        src="./assets/github_light.png"
+                        alt="My GitHub profile"
+                        class="icon github-icon"
+                        onclick="location.href='https://github.com/22Ranjan15/'"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== About Section ===== -->
+        <section id="about">
+            <p class="section__text__p1">Get To Know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" /> <!-- About Picture -->
+                </div>
+                <div class="about-details-container">
+                    <!-- Experience and Education Details -->
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img
+                                src="./assets/experience_light.png"
+                                alt="Experience icon"
+                                class="icon"
+                            />
+                            <h3>Experience</h3>
+                            <p>1 year <br />Teaching Assistant</p>
+                        </div>
+                        <div class="details-container">
+                            <img
+                                src="./assets/education_light.png"
+                                alt="Education icon"
+                                class="icon"
+                            />
+                            <h3>Education</h3>
+                            <p>B.Sc. Mathematics (Hons.)<br/>M.Sc. Data Science</p>
+                        </div>
+                    </div>
+                    
+                    <!-- About Me Text -->
+                    <div class="text-container">
+                        <p>
+                            Hi, I'm <b>Ranjan</b>, an aspiring <b>Data Scientist</b>, currently pursuing my <b>M.Sc. in Data Science</b> from IIIT Lucknow and 
+                            I have completed my <b>B.Sc. in Mathematics (Hons.)</b> from University of Kalyani. I have keen interest in <b>Data Engineering</b>,
+                            <b>Data Analysis</b>, <b>Big Data Technologies</b>, <b>Machine Learning</b> and <b>Deep Learning</b>. 
+                            
+                            <br>
+                            
+                            Beyond tech, I'm passionate about photography, travel, and cultural exploration. I love capturing unique moments and observing human 
+                            behaviors, which helps me build meaningful connections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Arrow to Navigate to Next Section -->
+            <img
+                src="./assets/arrow_light.png"
+                src-light="./assets/arrow_light.png"
+                src-dark="./assets/arrow_dark.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#experience'"
+            />
+        </section>
+
+        <!-- ===== Technical Skills Section ===== -->
+        <section id="experience">
+            <p class="section__text__p1">Explore My</p> <!-- Subtitle -->
+            <h1 class="title">Technical Skills</h1> <!-- Title -->
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <!-- Data Analyst & Engineer Skills -->
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Data Analyst & Engineer</h2>
+                        <div class="article-container">
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Python</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>SQL</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>EDA</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>MS Excel</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Power BI</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Apache Spark</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>DBMS</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Data Warehouse</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Databricks</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Snowflack</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning Engineer Skills -->
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Data Scientiest & Machine Learning Engineer</h2>
+                        <div class="article-container">
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Machine Learning</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Deep Learning</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>NLP</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>C++</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>HTML/CSS</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Streamlit</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Flask</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Git & GitHub</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Docker</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img
+                                    src="./assets/checkmark_light.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Azure Cloud Platform</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrow to Navigate to Next Section -->
+            <img
+                src="./assets/arrow_light.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#projects'"
+            />
+        </section>
+
+        <!-- ===== Projects Section ===== -->
+        <section id="projects">
+            <p class="section__text__p1">Browse My Recent</p> <!-- Subtitle -->
+            <h1 class="title">Projects</h1> <!-- Title -->
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <!-- Project 1 -->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/project-1.jpg" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Real Estate Insights & Price Prediction</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/22Ranjan15/MSD23012_House-Price-Prediction.git'"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://22ranjan15-house-flat-price-prediction-1-home-snz2tr.streamlit.app/'"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/project-2.jpg" alt="Project 2" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Paris 2024 Olympic Dashboard</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/22Ranjan15/Paris-2024-Olympic_Dashboard.git'"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/22Ranjan15/Paris-2024-Olympic_Dashboard.git'"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/project-3.jpeg" alt="Project 3" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">BlinkIT Sales Dashboard</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/22Ranjan15/Blinkit-Sales-Dashboard.git'"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://1drv.ms/x/c/56c892c84696a04b/EWTpWS6ldQRHuow8JDHtAIABLanHGevuYdhEda7sf4j4LQ?e=X1tdcf'"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img src="./assets/project-4.jpg" alt="Project 4" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">NYC Taxi Data Pipeline</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/22Ranjan15/Azure-Data-Engineering-Project.git'"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="location.href='https://github.com/22Ranjan15/Azure-Data-Engineering-Project.git'"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Arrow to Navigate to Next Section -->
+            <img
+                src="./assets/arrow_light.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#certifications'"
+            />
+        </section>
+
+        <!-- ===== Certifications ===== -->
+        <section id="certifications">
+            <div class="feature-container">
+                <div class="feature-content">
+                    <div class="main-info">
+                        <h2 class="main-title">Certifications</h2>
+                        <p class="main-description">
+                            Here are some of the courses and certifications I have completed
+                        </p>
+                    </div>
+            
+                    <div class="feature-grid">
+                        <!-- Certificate 1 -->
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-f0d59739-c35d-4612-a206-9c84c4f993bc.pdf" target="_blank">
+                                    <img class="feature-svg" src="./assets/Udemy.png" alt="ML">
+                                </a>
+                            </div>
+                            <div class="feature-info">
+                                <div class="feature-title">
+                                    Complete Data Analyst Bootcamp
+                                </div>
+                                <div class="feature-description">
+                                    <p>Issued by: Udemy</p>
+                                    <p>Date: Decembor 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certificate 2 -->
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <a href="https://coursera.org/share/273d82b8879dd3e623efd285e21d8a23" target="_blank">
+                                    <img class="feature-svg" src="./assets/deepLearning.png" alt="ML">
+                                </a>
+                            </div>
+                            <div class="feature-info">
+                                <div class="feature-title">
+                                    Machine Learning Specialization
+                                </div>
+                                <div class="feature-description">
+                                    <p>Issued by: DeepLearning.AI</p>
+                                    <p>Date: March 2024</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Certificate 3 -->
+                        <div class="feature-card">
+                            <div class="icon-container">
+                                <a href="https://coursera.org/share/aff14ab16e98aa288465bef91b8e1a72" target="_blank">
+                                    <img class="feature-svg" src="./assets/google.jpg" alt="ML">
+                                </a>
+                            </div>
+                            <div class="feature-info">
+                                <div class="feature-title">
+                                    Foundations of Data Science
+                                </div>
+                                <div class="feature-description">
+                                    <p>Issued by: Google</p>
+                                    <p>Date: June 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrow to Navigate to Next Section -->
+            <img
+                src="./assets/arrow_light.png"
+                alt="Arrow icon"
+                class="icon arrow"
+                onclick="location.href='./#contact'"
+            />
+        </section>
+
+        <!-- ===== Contact Section ===== -->
+        <section id="contact">
+            <p class="section__text__p1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <!-- Email Contact -->
+                <div class="contact-info-container">
+                    <img
+                        src="./assets/email_light.png"
+                        alt="Email icon"
+                        class="icon contact-icon email-icon"
+                    />
+                    <p><a class="font-bold" href="mailto:ranjandasbd22@gmail.com">ranjandasbd22@gmail.com</a></p>
+                </div>
+
+                <!-- Phone Contact -->
+                <div class="contact-info-container">
+                    <img 
+                        src="./assets/phone_light.png"
+                        alt="My Phone Number" 
+                        class="icon contact-icon phone-icon" 
+                    />
+                    <p><a class="font-bold" href="tel:+91 8918763394">+91 8918763394</a></p>
+                </div>
+                
+                <!-- LinkedIn Contact -->
+                <div class="contact-info-container">
+                    <img
+                        src="./assets/linkedin_light.png"
+                        alt="My LinkedIn profile"
+                        class="icon linkedin-icon"
+                        onclick="location.href='https://www.linkedin.com/in/das-ranjan22/'"
+                    />
+                    <p><a class="font-bold" href="https://www.linkedin.com/in/das-ranjan22/">LinkedIn</a></p>
+                </div>
+
+                <!-- Instagram Contact -->
+                <div class="contact-info-container">
+                    <img
+                        src="./assets/instagram.svg"
+                        alt="My LinkedIn profile"
+                        class="icon linkedin-icon"
+                        onclick="location.href='https://www.instagram.com/ranjan22151/'"
+                    />
+                    <p><a class="font-bold" href="https://www.instagram.com/ranjan22151/">Instagram</a></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ===== Footer ===== -->
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a class="font-bold" href="#profile">Home</a></li>
+                        <li><a class="font-bold" href="#about">About</a></li>
+                        <li><a class="font-bold" href="#resume">Resume</a></li>
+                        <li><a class="font-bold" href="#experience">Skills</a></li>
+                        <li><a class="font-bold" href="#projects">Projects</a></li>
+                        <li><a class="font-bold" href="#certifications">Certificates</a></li>
+                        <li><a class="font-bold" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2025 Ranjan.</p> <!-- Copyright -->
+        </footer>
+
+    <!-- Linking JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>

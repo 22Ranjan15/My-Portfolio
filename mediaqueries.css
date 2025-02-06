@@ -1,0 +1,157 @@
+/* ===== Media Query for Screens up to 1400px ===== */
+@media screen and (max-width: 1400px) {
+  /* Adjust profile section height and margin */
+  #profile {
+    height: 83vh; /* Set profile section height to 83% of viewport height */
+    margin-bottom: 6rem; /* Add margin at the bottom */
+  }
+
+  /* Allow about containers to wrap on smaller screens */
+  .about-containers {
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+  }
+
+  /* Adjust contact and projects sections to fit content */
+  #contact,
+  #projects {
+    height: fit-content; /* Set height to fit the content */
+  }
+}
+
+/* ===== Media Query for Screens up to 1200px ===== */
+@media screen and (max-width: 1200px) {
+  /* Hide desktop navigation */
+  #desktop-nav {
+    display: none; /* Hide desktop navigation */
+  }
+
+  /* Show hamburger navigation */
+  #hamburger-nav {
+    display: flex; /* Display hamburger navigation */
+  }
+
+  /* Adjust experience section margin */
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem; /* Add margin at the top */
+  }
+
+  /* Change profile and section container layout to block */
+  #profile,
+  .section-container {
+    display: block; /* Stack elements vertically */
+  }
+
+  /* Hide arrows for navigation */
+  .arrow {
+    display: none; /* Hide navigation arrows */
+  }
+
+  /* Adjust section and container height to fit content */
+  section,
+  .section-container {
+    height: fit-content; /* Set height to fit the content */
+  }
+
+  /* Add margin to sections */
+  section {
+    margin: 0 5%; /* Add horizontal margin */
+  }
+
+  /* Adjust profile picture container size and margin */
+  .section__pic-container {
+    width: 275px; /* Set width */
+    height: 275px; /* Set height */
+    margin: 0 auto 2rem; /* Center and add margin at the bottom */
+  }
+
+
+  /* Remove margin from about containers */
+  .about-containers {
+    margin-top: 0; /* Remove top margin */
+  }
+}
+
+/* ===== Media Query for Screens up to 600px ===== */
+@media screen and (max-width: 600px) {
+  /* Adjust contact and footer section height */
+  #contact,
+  footer {
+    height: 40vh; /* Set height to 40% of viewport height */
+  }
+
+  /* Adjust profile section height and margin */
+  #profile {
+    height: 83vh; /* Set profile section height to 83% of viewport height */
+    margin-bottom: 0; /* Remove margin at the bottom */
+  }
+
+  /* Adjust article font size */
+  article {
+    font-size: 1rem; /* Set font size */
+  }
+
+  /* Adjust footer navigation height and margin */
+  footer nav {
+    height: fit-content; /* Set height to fit the content */
+    margin-bottom: 2rem; /* Add margin at the bottom */
+  }
+
+  /* Allow containers to wrap on smaller screens */
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap; /* Wrap items to the next line if they overflow */
+  }
+
+  /* Remove margin from contact info containers */
+  .contact-info-container {
+    margin: 0; /* Remove margin */
+  }
+
+  /* Adjust font size for contact info and navigation links */
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem; /* Set font size */
+  }
+
+  /* Adjust experience sub-title font size */
+  .experience-sub-title {
+    font-size: 1.25rem; /* Set font size */
+  }
+
+  /* Adjust logo font size */
+  .logo {
+    font-size: 1.5rem; /* Set font size */
+  }
+
+  /* Change navigation links layout to column */
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 0.5rem; /* Add gap between links */
+    text-align: center; /* Center-align text */
+  }
+
+  /* Adjust profile picture container size */
+  .section__pic-container {
+    width: auto; /* Set width to auto */
+    height: 46vw; /* Set height relative to viewport width */
+    justify-content: center; /* Center content horizontally */
+  }
+
+
+  /* Adjust section text font size */
+  .section__text__p2 {
+    font-size: 1.25rem; /* Set font size */
+  }
+
+  /* Adjust title font size */
+  .title {
+    font-size: 2rem; /* Set font size */
+  }
+
+  /* Justify text in text containers */
+  .text-container {
+    text-align: justify; /* Justify text alignment */
+  }
+}
