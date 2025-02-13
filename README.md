@@ -49,7 +49,7 @@ Run the code using the Live Server
 - [ ] Improve accessibility & performance
 
 ## 🤝 Connect With Me
-📧 Email: your.email@example.com  
+📧 Email: ranjandasbd22@gmail.com  
 💼 LinkedIn: [My LinkedIn](https://www.linkedin.com/in/das-ranjan22/)
 
 ## ⭐ Support
